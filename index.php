@@ -7,138 +7,152 @@
  */?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Contact V4</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
-</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-font-smoothing:antialiased;
+        -moz-font-smoothing:antialiased;
+        -o-font-smoothing:antialiased;
+        font-smoothing:antialiased;
+        text-rendering:optimizeLegibility;
+    }
+
+    body {
+        font-family:"Open Sans", Helvetica, Arial, sans-serif;
+        font-weight:300;
+        font-size: 12px;
+        line-height:30px;
+        color:#777;
+        background:#0CF;
+    }
+
+    .container {
+        max-width:400px;
+        width:100%;
+        margin:0 auto;
+        position:relative;
+    }
+
+    #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+    #contact {
+        background:#F9F9F9;
+        padding:25px;
+        margin:50px 0;
+    }
+
+    #contact h3 {
+        color: #F96;
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    #contact h4 {
+        margin:5px 0 15px;
+        display:block;
+        font-size:13px;
+    }
+
+    fieldset {
+        border: medium none !important;
+        margin: 0 0 10px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+        width:100%;
+        border:1px solid #CCC;
+        background:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+    }
+
+    #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+        -webkit-transition:border-color 0.3s ease-in-out;
+        -moz-transition:border-color 0.3s ease-in-out;
+        transition:border-color 0.3s ease-in-out;
+        border:1px solid #AAA;
+    }
+
+    #contact textarea {
+        height:100px;
+        max-width:100%;
+        resize:none;
+    }
+
+    #contact button[type="submit"] {
+        cursor:pointer;
+        width:100%;
+        border:none;
+        background:#0CF;
+        color:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+        font-size:15px;
+    }
+
+    #contact button[type="submit"]:hover {
+        background:#09C;
+        -webkit-transition:background 0.3s ease-in-out;
+        -moz-transition:background 0.3s ease-in-out;
+        transition:background-color 0.3s ease-in-out;
+    }
+
+    #contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+    #contact input:focus, #contact textarea:focus {
+        outline:0;
+        border:1px solid #999;
+    }
+    ::-webkit-input-placeholder {
+        color:#888;
+    }
+    :-moz-placeholder {
+        color:#888;
+    }
+    ::-moz-placeholder {
+        color:#888;
+    }
+    :-ms-input-placeholder {
+        color:#888;
+    }
+
+</style>
 <body>
+<div class="container">
+    <form id="contact" action="" method="post">
+        <h3>Formulario SuperPoderoso</h3>
+        <h4>Ingresa tu información y Clic en "Ingresar"</h4>
+        <fieldset>
+            <input placeholder="Usuario" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Correo Electrónico" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Teléfono" type="tel" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="GitHub" type="url" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Descripción" tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Ingresando">Ingresar</button>
+        </fieldset>
+    </form>
 
-
-<div class="container-contact100">
-    <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
-				<span class="contact100-form-title">
-					Say Hello!
-				</span>
-
-            <div class="wrap-input100 validate-input" data-validate="Name is required">
-                <span class="label-input100">Your Name</span>
-                <input class="input100" type="text" name="name" placeholder="Enter your name">
-                <span class="focus-input100"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                <span class="label-input100">Email</span>
-                <input class="input100" type="text" name="email" placeholder="Enter your email addess">
-                <span class="focus-input100"></span>
-            </div>
-
-            <div class="wrap-input100 input100-select">
-                <span class="label-input100">Needed Services</span>
-                <div>
-                    <select class="selection-2" name="service">
-                        <option>Choose Services</option>
-                        <option>Online Store</option>
-                        <option>eCommerce Bussiness</option>
-                        <option>UI/UX Design</option>
-                        <option>Online Services</option>
-                    </select>
-                </div>
-                <span class="focus-input100"></span>
-            </div>
-
-            <div class="wrap-input100 input100-select">
-                <span class="label-input100">Budget</span>
-                <div>
-                    <select class="selection-2" name="budget">
-                        <option>Select Budget</option>
-                        <option>1500 $</option>
-                        <option>2000 $</option>
-                        <option>2500 $</option>
-                    </select>
-                </div>
-                <span class="focus-input100"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                <span class="label-input100">Message</span>
-                <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
-                <span class="focus-input100"></span>
-            </div>
-
-            <div class="container-contact100-form-btn">
-                <div class="wrap-contact100-form-btn">
-                    <div class="contact100-form-bgbtn"></div>
-                    <button class="contact100-form-btn">
-							<span>
-								Submit
-								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-							</span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
 </div>
-
-
-
-<div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<script>
-    $(".selection-2").select2({
-        minimumResultsForSearch: 20,
-        dropdownParent: $('#dropDownSelect1')
-    });
-</script>
-<!--===============================================================================================-->
-<script src="vendor/daterangepicker/moment.min.js"></script>
-<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-</script>
-
 </body>
 </html>
 
