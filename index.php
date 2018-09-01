@@ -7,6 +7,7 @@
  */?>
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="x-UTF-16LE-BOM">
 <style>
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
